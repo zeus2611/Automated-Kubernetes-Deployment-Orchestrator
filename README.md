@@ -1,0 +1,2 @@
+# Automated Kubernetes Deployment Orchestrator
+ This project revolutionizes Kubernetes cluster management by integrating Terraform modules and Terragrunt for seamless infrastructure provisioning. Leveraging pre-configured setups with ArgoCD, autoscaler, and other Kubernetes add-ons, it ensures efficient resource allocation and scaling. The automated CI/CD pipeline orchestrates container image builds, updates, and deployments via Docker Hub and ArgoCD, enabling swift application rollouts and enhancing development workflows.
