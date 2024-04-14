@@ -41,3 +41,5 @@ infra/dev/eks/.terragrunt-cache/Bb5Gs5QjD6aebcOoJ2-lFs1eCdo/wR8_LjhoIRrE9WxyMH9v
 /infra/dev/eks/.terragrunt-cache
 infra/dev/vpc/.terraform.lock.hcl
 /infra/dev/vpc/.terragrunt-cache
+/infra/dev/kubernetes-addons/.terragrunt-cache
+infra/dev/kubernetes-addons/.terraform.lock.hcl
