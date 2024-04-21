@@ -1,5 +1,6 @@
 terraform {
   source = "../../modules/kubernetes-addons"
+  // source = "git::git@github.com:zeus2611/terraform-modules.git//kubernetes-addons?ref=kubernetes-addons-v0.0.1"
 }
 
 include "root" {
@@ -30,11 +31,7 @@ generate "helm_provider" {
     kubernetes {
       host                   = data.aws_eks_cluster.eks.endpoint
       cluster_ca_certificate = base64decode(data.aws_eks_cluster.eks.certificate_authority[0].data)
-      exec {
-        api_version = "client.authentication.k8s.io/v1beta1"
-        args = ["eks", "get-token", "--cluster-name", data.aws_eks_cluster.eks.name]
-        command = "aws"
-      }
+      token                  = data.aws_eks_cluster_auth.eks.token
     }
   }
   EOF
@@ -47,6 +44,7 @@ inputs = {
 
   enable_cluster_autoscaler = true
   cluster_autoscaler_helm_version = "9.36.0"
+  // argo_cd_helm_version = "6.7.13"
 }
 
 dependency "eks" {

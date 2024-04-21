@@ -1,4 +1,5 @@
 terraform {
+  // source = "git::git@github.com:zeus2611/terraform-modules.git//eks?ref=eks-v0.0.1"
   source = "../../modules/eks"
 }
 
