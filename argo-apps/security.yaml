@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: security-application
+spec:
+  destination:
+    name: ''
+    namespace: security
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: argo-apps/security
+    repoURL: 'https://github.com/zeus2611/Automated-Kubernetes-Deployment-Orchestrator'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
