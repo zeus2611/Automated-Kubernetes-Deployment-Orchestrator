@@ -4,7 +4,7 @@ kind: CronJob
 metadata:
   name: kube-hunter
 spec:
-  schedule: "* * * * *"
+  schedule: "*/15 * * * *"
   jobTemplate:
     spec:
       template:
