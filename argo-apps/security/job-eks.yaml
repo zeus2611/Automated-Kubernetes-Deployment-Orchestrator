@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: kube-bench-weekly
 spec:
-  schedule: "0 * * * *" # run this job every two minutes. Can be changed. 
+  schedule: "2 * * * *" # run this job every two minutes. Can be changed. 
   jobTemplate:
     spec:
       template:
