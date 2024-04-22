@@ -5,7 +5,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: popeye
-  namespace: popeye
+  namespace: security
 
 ---
 # Popeye needs get/list access on the following Kubernetes resources.
@@ -91,7 +91,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: popeye
-    namespace: popeye
+    namespace: security
 roleRef:
   kind: ClusterRole
   name: popeye

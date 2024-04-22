@@ -4,7 +4,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: popeye
-  namespace: popeye
+  namespace: security
 spec:
   schedule: "59 23 * * *"
   concurrencyPolicy: Forbid
